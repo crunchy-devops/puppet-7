@@ -82,3 +82,6 @@ puppetserver ca list -a
 puppetserver ca sign -all
 puppetserver ca list -a
 ```
+
+
+go to FIRST_MANIFESTS.md  
