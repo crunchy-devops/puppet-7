@@ -15,7 +15,6 @@ sudo rpm -Uvh https://yum.puppet.com/puppet7-release-el-8.noarch.rpm # install p
 sudo yum list  --disablerepo '*' --enablerepo=puppet7 available
 yum list puppet*  # list all packages related to puppet
 sudo yum install -y puppetserver # install puppetserver and puppet agent in  a same time
-sudo repoquery --repoid=puppet7 | xargs yum list installed # see version installed
 ```
 
 ## Install Server and Agent 

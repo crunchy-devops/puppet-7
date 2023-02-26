@@ -45,3 +45,5 @@ puppet apply ssh.pp
 sshd -T | grep permitroot # check
 mv ssh.pp
 ```
+
+Go to TEMPLATES.md
