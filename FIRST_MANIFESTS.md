@@ -43,6 +43,16 @@ notify {'FqdnTest':
   message => "mon fqdn est ${::fqdn}", # Top-level variable from facter resources
 }
 ```
+Facter est un programme qui retourne les caracteristique du host dans des variables Puppet
+```shell
+facter processors
+facter processors.isa
+facter --json os.name os.release.major processors.isa
+```
+
+
+
+
 ### Variable
 ```puppet
 
@@ -51,6 +61,11 @@ notify {'Test':
   message => "la variable est = ${todo}", # display local variable 
 }
 ```
+#### Type de Variables
+$redis_package_name = 'redis'   # String  
+$install_java = true            # Boolean  
+$dns_servers = [ '8.8.8.8' , '8.8.4.4' ]   # Array  
+$config_hash = { user => 'joe', group => 'admin' }  # Hash  
 
 ### Idempotence 
 Creer un user alice   
@@ -76,7 +91,10 @@ user { 'mcfakey':
     managehome => true,
 }
 ```
-Mettre une linmite temps pour les mots de passe
+
+### Quelques Puppet resources natives
+
+Mettre une limite temps pour les mots de passe
 ```puppet
 user { 'fusco':
   ensure           => 'present',
@@ -85,43 +103,60 @@ user { 'fusco':
   password_max_age => 30,
 }
 ```
-Verification 
+Verification de la date d'expiration
 ```shell
 chage -l fusco 
 ```
 
+```puppet
+# create a directory
+  file { '/tmp/site-conf':
+    ensure => 'directory',
+  }
 
+  # a fuller example, including permissions and ownership
+  file { '/tmp/admin-app-log':
+    ensure => 'directory',
+    owner  => 'root',
+    group  => 'wheel',
+    mode   => '0750',
+  }
 
-
-
-
-
-## Create Environments
-```shell
-mkdir -p /etc/puppetlabs/code/environments/dev/manifests # create a dev environment
-ll /etc/puppetlabs/code/environments/  # Check 
-puppet config set environment dev --section=agent  # assign dev environment in puppet configuration
+  # this example is incorrect and creates a file
+  file { '/tmp/af.conf/':
+    ensure => 'present',
+  }
+```
+Symbolique link 
+```puppet
+file { '/tmp/link-to-motd':
+    ensure => 'link',
+    target => '/etc/motd',
+  }
 ```
 
-## Agent run    
-By default every 30 minutes  
-```shell
-puppet config print runinterval  # returns 1800 seconds
-expr 1800 / 60 
-puppet agent -t
+Ajouter un fichier s'il est absent, mais ne le met pas a jour s'il est change manuellement
+```puppet
+file { '/tmp/hello-file':
+  ensure  => 'present',
+  replace => 'no', # importante propriete
+  content => "From Puppet\n",
+  mode    => '0644',
+}
 ```
 
-## Bash Alias
+###  Install apache
 ```shell
-alias cdpp='cd $(puppet config print manifest)'
-puppet config print runinterval
+puppet module install puppetlabs/apache 
 ```
 
-## Resource 
-```shell
-puppet resource --type # list of resource available 
-puppet describe service 
-puppet resource service httpd 
+![Forge_apache](screenshot/forge_apache.png)
 
-```
+## Execute the module
+```shell
+puppet apply -e 'include apache' # install apache
+ss -nltp  # Check the port 80
+curl localhost # Check the contents
+
+
 go to MODULES.md  

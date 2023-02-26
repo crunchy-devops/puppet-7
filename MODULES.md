@@ -4,29 +4,6 @@ Modules are great ways to encapsulate code in to reusable lumps.
 Puppet forge is a great resource for modules that have been shared.  
 The stdlib from puppetlabs is always useful. 
 
-## Install a module 
-
-###  Install apache
-```shell
-puppet module install puppetlabs/apache 
-```
-
-![Forge_apache](screenshot/forge_apache.png)
-
-## Execute the module
-```shell
-puppet apply -e 'include apache' # install apache
-ss -nltp  # Check the port 80
-curl localhost # Check the contents
-
-
-
-
-
-
-
-
-
 ```shell
 puppet module list
 puppet module install puppetlabs/<module_name>
@@ -37,7 +14,7 @@ puppet module install -i /etc/puppetlabs/code/modules puppetlabs/stdlib
 
 ## Edit module code 
 ```shell
-cd  cd /etc/puppetlabs/code/environments/production/modules/stdlib/examples/
+cd /etc/puppetlabs/code/environments/production/modules/stdlib/examples/
 cp file_line.pp ~
 cd ~
 puppet apply file_line.pp 
@@ -95,11 +72,6 @@ facter --show-legacy | grep osfamily
 puppet module list # display all modules installed
 puppet module uninstall puppetlabs/apache # remove module
 puppet module list # check 
-```
-
-## install a module in a shared environment 
-```shell
-puppet module install puppetlabs/apache -i /etc/puppetlabs/code/modules
 ```
 
 go to FILE_LINE.md
