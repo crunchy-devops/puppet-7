@@ -6,6 +6,27 @@ The stdlib from puppetlabs is always useful.
 
 ## Install a module 
 
+###  Install apache
+```shell
+puppet module install puppetlabs/apache 
+```
+
+![Forge_apache](screenshot/forge_apache.png)
+
+## Execute the module
+```shell
+puppet apply -e 'include apache' # install apache
+ss -nltp  # Check the port 80
+curl localhost # Check the contents
+
+
+
+
+
+
+
+
+
 ```shell
 puppet module list
 puppet module install puppetlabs/<module_name>
