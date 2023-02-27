@@ -60,7 +60,7 @@ and check
 puppet agent -t
 ```
 
-Nous allons creer un autre classe 
+Nous allons creer une autre classe 
 ```shell
 cd webforce/    # se placer dans la directory du module
 pdk new class exercice2 # executez la creation d'une autre classe
@@ -82,7 +82,7 @@ Changez de directory ```cd /etc/puppetlabs/code/environments/production/modules/
 ```shell
 pdk new class webforce
 ```
-Le fichier init.pp est genere
+Le fichier init.pp est genere  
 Copiez et collez 
 ```puppet
 class webforce {
@@ -91,7 +91,7 @@ class webforce {
 }
 ```
 
-Changez de directory ```cd /etc/puppetlabs/code/environments/production/manifests```
+Changez de directory ```cd /etc/puppetlabs/code/environments/production/manifests```  
 changez le fichier site.pp
 ```puppet
 node default { 
