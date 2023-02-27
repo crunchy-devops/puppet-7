@@ -157,6 +157,6 @@ puppet module install puppetlabs/apache
 puppet apply -e 'include apache' # install apache
 ss -nltp  # Check the port 80
 curl localhost # Check the contents
-
+```
 
 go to MODULES.md  
