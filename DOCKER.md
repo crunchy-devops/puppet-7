@@ -9,4 +9,5 @@ dnf --enablerepo=docker-ce-stable -y install docker-ce
 systemctl enable --now docker
 rpm -q docker-ce
 docker version
+docker ps
 ```

@@ -46,4 +46,74 @@ sshd -T | grep permitroot # check
 mv ssh.pp
 ```
 
+## More with file_line resource 
+
+### Add a string -- type reference
+```puppet
+file { '/tmp/eureka.txt':
+ensure => present,
+}->
+file_line { 'Append a line to /tmp/eureka.txt':
+path => '/tmp/eureka.txt',  
+line => 'Hello World',
+}
+```
+
+```shell
+file { '/tmp/eureka.txt':
+ensure => present,
+}->
+file_line { 'Append a line to /tmp/eureka.txt':
+path => '/tmp/eureka.txt',  
+line => 'Hello Eureka',
+match   => "^Hello.*$",
+}
+```
+
+### Absent is more complex than present 
+```shell
+# copy sshd_config in tmp
+mkdir -p /tmp/etc/ssh/
+cp /etc/ssh/sshd_config  /tmp/etc/ssh/
+```
+
+Create a stdlib.pp
+```shell
+file_line { 'no_port':
+  ensure => absent,
+  match  => '^Port',
+  line => 'Port 5432',
+  path   => '/tmp/etc/ssh/ssh_config',
+  match_for_absence => true,
+  multiple =>true, 
+}
+```
+
+## Other example
+using a fact variable 
+Creez un fichier httpd.conf
+```shell
+<VirtualHost *:80>
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
+</VirtualHost>
+```
+Creez un fichier fact_replace.pp
+```puppet
+include stdlib
+$domaine = $facts['fqdn']
+file_line { 'virtual_host':
+  ensure => present,
+  path   => '/tmp/etc/ssh/httpd.conf',
+  line   => "<VirtualHost ${domaine}:80>",
+  match  => '<VirtualHost \*:80>',
+}
+```
+
+
+
+
+
+
 Go to TEMPLATES.md
