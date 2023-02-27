@@ -29,6 +29,6 @@ ajoutez dans common.yaml
 webforce::exercice3::greeting: Hola Mundo
 ```
 
-go to r10k.md
+go to ENVIRONMENTS.md
 
 

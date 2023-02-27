@@ -26,3 +26,5 @@ puppet describe service
 puppet resource service httpd 
 
 ```
+
+go to R10K.md
