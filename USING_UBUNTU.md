@@ -1,5 +1,12 @@
 # Puppet on Ubuntu
 
+## Gateway host
+
+```shell
+# ssh to gateway host provided 
+sh connect.sh
+# check the prompt
+```
 
 ## Install 
 ```shell
@@ -22,6 +29,14 @@ vi .profile  # edit .profile
 export PATH=$PATH:/opt/puppetlabs/bin:   # adding path to puppet program
 # save 
 source .profile   # set the shell session to get the latest changes
-puppet --version  # get the puppet version  
+puppet --version  # get the puppet version
+# set up puppet host with the intenal IP address
+vi /etc/hosts
+# adding 
+10.132.0.10 puppet 
+# save 
+ping puppet
 puppet agent -t  # Check if it's work fine
 ```
+
+Go to CONTAINERS.md

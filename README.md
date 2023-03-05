@@ -1,9 +1,10 @@
 # Puppet Server on Centos8
 
-
 ## See Network Topology
 ![Topology](screenshot/topology.png)
 
+
+Go to USING_UBUNTU.md
 
 ## Install centos stream 8 et puppet repo package
 ```shell
