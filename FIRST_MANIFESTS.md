@@ -1,6 +1,6 @@
 # First manifests
 
-## First manifest
+## Manifest
 Manifests allow us to save code into scripts with an extension of .pp  
 Manifests can be applied locally with ```puppet apply```
 For full automation manifests need to be stored on the server  
@@ -15,7 +15,7 @@ vi /etc/puppetlabs/code/environments/production/manifests/site.pp
 ``` 
 
 ### Simple message 
-Ajout un simple message 
+Ajouter un simple message 
 ```puppet
 notify {'message':
   name => 'my message',

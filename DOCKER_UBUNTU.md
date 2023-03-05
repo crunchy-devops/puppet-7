@@ -27,3 +27,14 @@ ansible-playbook -i inventory playbook.yml # run the playbook for installing doc
 ```
 Log out from your ssh session and log in again so all changes will take effect.  
 Type ``` docker ps``` as ubuntu user for checking if all is fine. 
+
+## Portainer 
+```shell
+docker run -d --name portainer -p 30001:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -H unix:///var/run/docker.sock
+```
+
+Go to FIRST_MANIFESTS.md
+
+
+
+

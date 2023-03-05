@@ -39,4 +39,13 @@ ping puppet
 puppet agent -t  # Check if it's work fine
 ```
 
-Go to CONTAINERS.md
+## Generate a CA on server
+```shell
+/opt/puppetlabs/bin/puppetserver ca list -a # list all current certificats
+/opt/puppetlabs/bin/puppetserver ca sign -a # list all current certificats
+```
+
+
+
+
+Go to DOCKER_UBUNTU.md
