@@ -16,14 +16,13 @@ puppet agent -t
 ## Bash Alias
 ```shell
 alias cdpp='cd $(puppet config print manifest)'
-puppet config print runinterval
 ```
 
 ## Resource
 ```shell
 puppet resource --type # list of resource available 
-puppet describe service 
-puppet resource service httpd 
+puppet describe service  # service display
+puppet resource service httpd # service httpd
 
 ```
 

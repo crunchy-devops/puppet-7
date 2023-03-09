@@ -67,12 +67,34 @@ puppet agent -t # check
 facter --show-legacy | grep osfamily
 ```
 
+## How to increase fact limit
+```shell
+/opt/puppetlabs/bin/puppet module install puppetlabs-inifile --version 5.4.0
+```
+Create a site.pp file
+```puppet
+
+$conf_dir = $facts['os']['family'] ? {
+      'windows' => "${facts['common_appdata']}/PuppetLabs/puppet/etc",
+      default => '/etc/puppetlabs/puppet'
+  }
+
+  ini_setting { 'puppet agent: fact_value_length_soft_limit':
+      ensure => present,
+      path => "${conf_dir}/puppet.conf",
+      section => 'agent',
+      setting => 'fact_value_length_soft_limit',
+     value => '8192'
+  }
+```
+
 ## Remove a module
 ```shell
 puppet module list # display all modules installed
 puppet module uninstall puppetlabs/apache # remove module
 puppet module list # check 
 ```
+
 
 go to FILE_LINE.md
 

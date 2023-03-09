@@ -50,9 +50,6 @@ facter processors.isa
 facter --json os.name os.release.major processors.isa
 ```
 
-
-
-
 ### Variable
 ```puppet
 
@@ -78,7 +75,7 @@ sudo useradd alice
 ```
 Nous avons un message de warning       
 Alors qu'avec une maniere declarative comme le langage DSL Puppet  
-soit le script est execute ou il est ignore
+soit le script est execute, soit il est ignore
 ```puppet
 user { 'paul': 
   ensure => 'present',
@@ -159,5 +156,15 @@ puppet apply -e 'include apache' # install apache
 ss -nltp  # Check the port 80
 curl localhost # Check the contents
 ```
+
+## Exercice 1
+Créez un fichier site.pp qui me permet de créer un dossier /tmp/test sur mes deux containers
+
+
+
+
+
+
+
 
 go to MODULES.md  
