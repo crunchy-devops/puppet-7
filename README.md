@@ -4,7 +4,7 @@
 ![Topology](screenshot/topology.png)
 
 
-Go to USING_UBUNTU.md
+<span style="color:red">if you are using Ubuntu 20.04 **go to USING_UBUNTU.md file**</span>
 
 ## Install centos stream 8 et puppet repo package
 ```shell

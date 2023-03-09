@@ -43,7 +43,7 @@ notify {'FqdnTest':
   message => "mon fqdn est ${::fqdn}", # Top-level variable from facter resources
 }
 ```
-Facter est un programme qui retourne les caracteristique du host dans des variables Puppet
+Facter est un programme qui retourne les caracteristiques du host dans des variables Puppet
 ```shell
 facter processors
 facter processors.isa
@@ -76,15 +76,16 @@ et nous executons une autre fois la meme commande
 ```shell
 sudo useradd alice 
 ```
-Nous avons un message        
+Nous avons un message de warning       
 Alors qu'avec une maniere declarative comme le langage DSL Puppet  
-
+soit le script est execute ou il est ignore
 ```puppet
 user { 'paul': 
   ensure => 'present',
 }
 ```
-Executez le script une deuxieme fois, il n'y a pas de message.    
+Executez le script une deuxieme fois, il n'y a pas de message. 
+Ensuite un exemple avec creation de la home directory du user
 ```puppet
 user { 'mcfakey':
     ensure     => 'present',
@@ -98,7 +99,7 @@ Mettre une limite temps pour les mots de passe
 ```puppet
 user { 'fusco':
   ensure           => 'present',
-  # ATTENTION utilisation de single quotes to arreter $ evaluation
+  # ATTENTION utilisation de single quotes pour arreter le caracter $ d'evaluation des variables
   password         => '$6$LD5snipgNY1',
   password_max_age => 30,
 }
@@ -145,7 +146,7 @@ file { '/tmp/hello-file':
 }
 ```
 
-###  Install apache
+###  Install apache module
 ```shell
 puppet module install puppetlabs/apache 
 ```
