@@ -11,10 +11,6 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
  && apt-get install -y vim.tiny wget sudo net-tools ca-certificates unzip \
  && rm -rf /var/lib/apt/lists/*
 
-# Set the locale
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
 
 RUN mkdir /var/run/sshd
 # SSH login fix. Otherwise user is kicked off after login
