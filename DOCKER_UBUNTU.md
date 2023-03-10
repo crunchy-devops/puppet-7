@@ -1,7 +1,9 @@
-# Docker on ubuntu using Ansible
+# Install Docker on ubuntu using Ansible
 
 ## Prerequisite for ubuntu
 ```shell
+# as normal user
+cd
 sudo apt update   # update all packages repo
 #sudo apt upgrade  #  upgrade all packages
 sudo apt -y install git wget          # install git and wget 
@@ -33,7 +35,7 @@ Type ``` docker ps``` as ubuntu user for checking if all is fine.
 docker run -d --name portainer -p 30001:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -H unix:///var/run/docker.sock
 ```
 
-Go to FIRST_MANIFESTS.md
+Go to CONTAINERS.md
 
 
 

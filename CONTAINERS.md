@@ -33,5 +33,4 @@ As root outside containers, on your VM
 /opt/puppetlabs/bin/puppetserver ca sign -a # list all current certificats
 ```
 
-
 **Go to FIRST_MANIFESTS.md**
