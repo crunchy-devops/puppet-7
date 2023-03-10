@@ -25,6 +25,8 @@ sudo systemctl start puppetserver  # start the service
 sudo systemctl enable puppetserver # set symbolic link for starting up puppetserver when rebooting the VM
 sudo systemctl status puppetserver  # check service status
 ```
+## Schema
+![puppetmaster](screenshot/puppetmaster.png)
 
 ## Configuring the root user 
 ```shell

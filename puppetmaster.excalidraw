@@ -1,0 +1,918 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw-jetbrains-plugin",
+  "elements": [
+    {
+      "id": "AacxJSCNUQsDuzM7Yh8EZ",
+      "type": "rectangle",
+      "x": 285,
+      "y": 124,
+      "width": 386,
+      "height": 342,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 486960473,
+      "version": 66,
+      "versionNonce": 2006504631,
+      "isDeleted": false,
+      "boundElementIds": null
+    },
+    {
+      "id": "9RPiAPMDYlm8puHUcO1Du",
+      "type": "text",
+      "x": 318,
+      "y": 84,
+      "width": 98,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 177550905,
+      "version": 11,
+      "versionNonce": 286208665,
+      "isDeleted": false,
+      "boundElementIds": null,
+      "text": "OS ubuntu",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "zoiXFfiS5RBuiVBQwE11I",
+      "type": "rectangle",
+      "x": 316,
+      "y": 153,
+      "width": 154,
+      "height": 83,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 816160631,
+      "version": 60,
+      "versionNonce": 1054641785,
+      "isDeleted": false,
+      "boundElementIds": []
+    },
+    {
+      "id": "Eupu5tLrcri9_HJ_mY3wz",
+      "type": "text",
+      "x": 332,
+      "y": 182,
+      "width": 122,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1519758777,
+      "version": 14,
+      "versionNonce": 234006935,
+      "isDeleted": false,
+      "boundElementIds": [
+        "Q3Ud3wquL3Xt6uCOeyymO"
+      ],
+      "text": "puppetserver",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "baseline": 18
+    },
+    {
+      "type": "rectangle",
+      "version": 234,
+      "versionNonce": 812685431,
+      "isDeleted": false,
+      "id": "MUYc6XNRuzlxwibxqBtkO",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 333,
+      "y": 330.5,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 154,
+      "height": 74.00000000000001,
+      "seed": 816711641,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElementIds": [
+        "Q3Ud3wquL3Xt6uCOeyymO"
+      ]
+    },
+    {
+      "id": "7BSJ4Lcejx_d07fZ95avc",
+      "type": "text",
+      "x": 344,
+      "y": 357,
+      "width": 126,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1888074137,
+      "version": 39,
+      "versionNonce": 1380536343,
+      "isDeleted": false,
+      "boundElementIds": null,
+      "text": "puppet agent",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "pS5XgtkmZhsV4moBgHANb",
+      "type": "freedraw",
+      "x": 469,
+      "y": 203,
+      "width": 83,
+      "height": 170,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 1457783865,
+      "version": 159,
+      "versionNonce": 1310637401,
+      "isDeleted": false,
+      "boundElementIds": null,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          15,
+          8
+        ],
+        [
+          21,
+          12
+        ],
+        [
+          26,
+          15
+        ],
+        [
+          31,
+          17
+        ],
+        [
+          35,
+          20
+        ],
+        [
+          41,
+          24
+        ],
+        [
+          46,
+          27
+        ],
+        [
+          48,
+          28
+        ],
+        [
+          51,
+          31
+        ],
+        [
+          54,
+          32
+        ],
+        [
+          54,
+          34
+        ],
+        [
+          55,
+          34
+        ],
+        [
+          55,
+          35
+        ],
+        [
+          56,
+          35
+        ],
+        [
+          57,
+          37
+        ],
+        [
+          59,
+          38
+        ],
+        [
+          61,
+          40
+        ],
+        [
+          63,
+          42
+        ],
+        [
+          67,
+          44
+        ],
+        [
+          69,
+          46
+        ],
+        [
+          71,
+          48
+        ],
+        [
+          73,
+          50
+        ],
+        [
+          74,
+          52
+        ],
+        [
+          75,
+          53
+        ],
+        [
+          75,
+          54
+        ],
+        [
+          75,
+          55
+        ],
+        [
+          76,
+          57
+        ],
+        [
+          77,
+          58
+        ],
+        [
+          78,
+          61
+        ],
+        [
+          79,
+          62
+        ],
+        [
+          80,
+          65
+        ],
+        [
+          80,
+          67
+        ],
+        [
+          80,
+          68
+        ],
+        [
+          81,
+          70
+        ],
+        [
+          82,
+          72
+        ],
+        [
+          82,
+          73
+        ],
+        [
+          82,
+          74
+        ],
+        [
+          82,
+          75
+        ],
+        [
+          82,
+          76
+        ],
+        [
+          83,
+          77
+        ],
+        [
+          83,
+          78
+        ],
+        [
+          83,
+          79
+        ],
+        [
+          83,
+          80
+        ],
+        [
+          83,
+          81
+        ],
+        [
+          83,
+          82
+        ],
+        [
+          83,
+          84
+        ],
+        [
+          83,
+          86
+        ],
+        [
+          83,
+          88
+        ],
+        [
+          83,
+          90
+        ],
+        [
+          83,
+          91
+        ],
+        [
+          83,
+          92
+        ],
+        [
+          83,
+          94
+        ],
+        [
+          83,
+          95
+        ],
+        [
+          83,
+          96
+        ],
+        [
+          83,
+          98
+        ],
+        [
+          83,
+          100
+        ],
+        [
+          83,
+          101
+        ],
+        [
+          83,
+          103
+        ],
+        [
+          83,
+          104
+        ],
+        [
+          83,
+          106
+        ],
+        [
+          83,
+          107
+        ],
+        [
+          82,
+          108
+        ],
+        [
+          81,
+          109
+        ],
+        [
+          81,
+          111
+        ],
+        [
+          80,
+          113
+        ],
+        [
+          79,
+          115
+        ],
+        [
+          79,
+          116
+        ],
+        [
+          79,
+          118
+        ],
+        [
+          78,
+          119
+        ],
+        [
+          78,
+          120
+        ],
+        [
+          77,
+          121
+        ],
+        [
+          76,
+          123
+        ],
+        [
+          76,
+          124
+        ],
+        [
+          75,
+          124
+        ],
+        [
+          75,
+          125
+        ],
+        [
+          75,
+          126
+        ],
+        [
+          74,
+          127
+        ],
+        [
+          74,
+          128
+        ],
+        [
+          73,
+          130
+        ],
+        [
+          72,
+          131
+        ],
+        [
+          72,
+          133
+        ],
+        [
+          70,
+          134
+        ],
+        [
+          69,
+          135
+        ],
+        [
+          69,
+          137
+        ],
+        [
+          68,
+          139
+        ],
+        [
+          67,
+          141
+        ],
+        [
+          67,
+          142
+        ],
+        [
+          66,
+          143
+        ],
+        [
+          65,
+          144
+        ],
+        [
+          65,
+          144
+        ],
+        [
+          65,
+          145
+        ],
+        [
+          65,
+          146
+        ],
+        [
+          65,
+          147
+        ],
+        [
+          64,
+          147
+        ],
+        [
+          64,
+          148
+        ],
+        [
+          64,
+          149
+        ],
+        [
+          64,
+          150
+        ],
+        [
+          63,
+          150
+        ],
+        [
+          63,
+          151
+        ],
+        [
+          62,
+          151
+        ],
+        [
+          62,
+          153
+        ],
+        [
+          61,
+          154
+        ],
+        [
+          61,
+          155
+        ],
+        [
+          60,
+          156
+        ],
+        [
+          59,
+          156
+        ],
+        [
+          59,
+          157
+        ],
+        [
+          59,
+          158
+        ],
+        [
+          58,
+          158
+        ],
+        [
+          58,
+          159
+        ],
+        [
+          57,
+          159
+        ],
+        [
+          57,
+          160
+        ],
+        [
+          56,
+          160
+        ],
+        [
+          55,
+          160
+        ],
+        [
+          54,
+          161
+        ],
+        [
+          53,
+          162
+        ],
+        [
+          52,
+          163
+        ],
+        [
+          51,
+          163
+        ],
+        [
+          51,
+          164
+        ],
+        [
+          50,
+          164
+        ],
+        [
+          49,
+          164
+        ],
+        [
+          47,
+          165
+        ],
+        [
+          47,
+          166
+        ],
+        [
+          46,
+          166
+        ],
+        [
+          45,
+          166
+        ],
+        [
+          44,
+          166
+        ],
+        [
+          43,
+          167
+        ],
+        [
+          40,
+          167
+        ],
+        [
+          38,
+          167
+        ],
+        [
+          36,
+          167
+        ],
+        [
+          34,
+          167
+        ],
+        [
+          33,
+          167
+        ],
+        [
+          33,
+          168
+        ],
+        [
+          32,
+          168
+        ],
+        [
+          31,
+          168
+        ],
+        [
+          31,
+          169
+        ],
+        [
+          30,
+          169
+        ],
+        [
+          30,
+          169
+        ],
+        [
+          29,
+          169
+        ],
+        [
+          28,
+          169
+        ],
+        [
+          27,
+          169
+        ],
+        [
+          26,
+          169
+        ],
+        [
+          26,
+          170
+        ],
+        [
+          25,
+          170
+        ],
+        [
+          24,
+          170
+        ],
+        [
+          23,
+          170
+        ],
+        [
+          22,
+          170
+        ],
+        [
+          21,
+          170
+        ],
+        [
+          20,
+          170
+        ],
+        [
+          20,
+          169
+        ],
+        [
+          19,
+          169
+        ],
+        [
+          18,
+          169
+        ],
+        [
+          17,
+          169
+        ],
+        [
+          17,
+          169
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": null
+    },
+    {
+      "id": "SXI2BqLr78H_LaJxKKqc4",
+      "type": "text",
+      "x": 346,
+      "y": 270,
+      "width": 174,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 909713591,
+      "version": 135,
+      "versionNonce": 1207696825,
+      "isDeleted": false,
+      "boundElementIds": null,
+      "text": "http://puppet:8140",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "syiYgfNpVXSgz4WegrBON",
+      "type": "text",
+      "x": 535,
+      "y": 166,
+      "width": 106,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 599765879,
+      "version": 85,
+      "versionNonce": 1113374393,
+      "isDeleted": false,
+      "boundElementIds": null,
+      "text": "/etc/hosts",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "_LPmEAcOEUhdRq6SyZ-OM",
+      "type": "text",
+      "x": 511,
+      "y": 198,
+      "width": 160,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 994571449,
+      "version": 97,
+      "versionNonce": 171152601,
+      "isDeleted": false,
+      "boundElementIds": null,
+      "text": "10.xx.xx.x puppet",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  }
+}
