@@ -1,8 +1,7 @@
-# Puppet Server on Centos8
+# Puppet Training course
 
-## See Network Topology
+## See Network Topology for GCP 
 ![Topology](screenshot/topology.png)
-
 
 <span style="color:red">if you are using Ubuntu 20.04 **go to USING_UBUNTU.md file**</span>
 
@@ -45,7 +44,4 @@ ss -ntlp # parameter p add more info and display the name of the application whi
 /opt/puppetlabs/bin/puppetserver ca list -a # list all current certificats
 ```
 
-
-
-
-go to FIRST_MANIFESTS.md  
+go to DOCKER_CENTOS.md  
