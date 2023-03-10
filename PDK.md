@@ -4,12 +4,12 @@ PDK provides integrated testing tools and a command line interface to help you d
 
 ## Installer le pdk 
 ```shell
-sudo yum install -y pdk
+sudo apt install -y pdk
 ```
 
 ## Creer l'arborescence d'un nouveau module
 ```shell
-cd /etc/puppetlabs/code/environments/production/modules
+cd /etc/puppetlabs/code/environments/main/modules
 pdk new module webforce
 ```
 Les classes sont des blocs nommés de code Puppet qui sont stockés dans des modules et appliqués ultérieurement  
@@ -19,9 +19,10 @@ Les classes configurent généralement des blocs de fonctionnalités volumineux 
 tels que tous les packages, fichiers de configuration et services nécessaires à l'exécution d'une application.  
 
 ```shell
+cd webforce
 pdk new class exercice1
 ```
-Change le script cd /etc/puppetlabs/code/environments/production/modules/exercice1.pp
+Change le script cd /etc/puppetlabs/code/environments/main/modules/webforce/exercice1.pp
 ```puppet
 # @summary Create temporary file
 # 
