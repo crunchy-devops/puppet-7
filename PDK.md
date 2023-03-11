@@ -32,7 +32,7 @@ Change le script cd /etc/puppetlabs/code/environments/main/modules/webforce/exer
 # include my_module::my_class
 class webforce::exercice1 {
   file { '/tmp/hello':
-    ensure => 'present',
+    ensure => file,
     content => 'Hello World',
     path => '/tmp/hello',
   } 
@@ -72,7 +72,7 @@ Copier la code suivant
 ```puppet
 class webforce::exercice2 {
   file { '/tmp/another':
-      ensure => 'present',
+      ensure => file,
       content => 'Another Hello World',
       path => '/tmp/another',
     }

@@ -15,7 +15,7 @@ Dans exercice3.pp, copier le code suivant
 ```puppet
 class webforce::exercice3 (String $greeting) {
     file { '/tmp/my_parameters':
-          ensure => 'present',
+          ensure => file,
           content => $greeting,
           path => '/tmp/my_parameters',
       }

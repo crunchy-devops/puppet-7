@@ -114,21 +114,17 @@ chage -l fusco
 
   # a fuller example, including permissions and ownership
   file { '/tmp/admin-app-log':
-    ensure => 'directory',
+    ensure => directory,
     owner  => 'root',
-    group  => 'wheel',
+    group  => 'root',
     mode   => '0750',
   }
 
-  # this example is incorrect and creates a file
-  file { '/tmp/af.conf/':
-    ensure => 'present',
-  }
 ```
 Symbolique link 
 ```puppet
 file { '/tmp/link-to-motd':
-    ensure => 'link',
+    ensure => link,
     target => '/etc/motd',
   }
 ```
@@ -136,7 +132,7 @@ file { '/tmp/link-to-motd':
 Ajouter un fichier s'il est absent, mais ne le met pas a jour s'il est change manuellement
 ```puppet
 file { '/tmp/hello-file':
-  ensure  => 'present',
+  ensure  => file,
   replace => 'no', # importante propriete
   content => "From Puppet\n",
   mode    => '0644',
@@ -160,11 +156,5 @@ curl localhost # Check the contents
 ## Exercice 1
 Créez un fichier site.pp qui me permet de créer un dossier /tmp/test sur mes deux containers
 
+go to FILE_LINE.md
 
-
-
-
-
-
-
-go to MODULES.md  

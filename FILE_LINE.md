@@ -32,7 +32,7 @@ add the following code
 ```puppet
 file_line { 'ssh_root_login' :
   path   => '/etc/ssh/sshd_config',
-  ensure => 'present',
+  ensure => file,
   line   => 'PermitRootLogin no',
   match  => '^PermitRootLogin ',
   notify => Service['sshd'],
@@ -51,7 +51,7 @@ mv ssh.pp
 ### Add a string -- type reference
 ```puppet
 file { '/tmp/eureka.txt':
-ensure => present,
+ensure => file,
 }->
 file_line { 'Append a line to /tmp/eureka.txt':
 path => '/tmp/eureka.txt',  
@@ -61,7 +61,7 @@ line => 'Hello World',
 
 ```shell
 file { '/tmp/eureka.txt':
-ensure => present,
+ensure => file,
 }->
 file_line { 'Append a line to /tmp/eureka.txt':
 path => '/tmp/eureka.txt',  
@@ -77,7 +77,7 @@ mkdir -p /tmp/etc/ssh/
 cp /etc/ssh/sshd_config  /tmp/etc/ssh/
 ```
 
-Create a stdlib.pp
+Create a stdlib.pp file
 ```shell
 file_line { 'no_port':
   ensure => absent,
@@ -110,10 +110,5 @@ file_line { 'virtual_host':
   match  => '<VirtualHost \*:80>',
 }
 ```
-
-
-
-
-
 
 Go to TEMPLATES.md
