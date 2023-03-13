@@ -15,9 +15,9 @@ vi /etc/ssh/sshd_config
 PermitRootLogin yes
 #save it 
 sudo kill -SIGHUP $(pgrep -f "sshd -D") # kill sshd process using pgrep to find it
-sshd -D
+/usr/sbin/sshd -D
 ```
-### Check 
+### Check on the vm
 ```shell
 ssh root@<ip_target1_container>
 #enter password as password
