@@ -19,11 +19,11 @@ docker ps # Check
 puppet agent -t  # check 
 ```
 
-## Centos 8 Stream  
+## Almalinux container
 ```shell
-cd puppet-agent/centos-8-stream  # go to the relevant directory
-docker build -t puppet-agent-centos .  # build the image
-docker run -d --name target2 --add-host puppet:<internal_ip> puppet-agent-centos # enter puppetmaster internal ip address 
+cd puppet-agent/almalinux  # go to the relevant directory
+docker build -t puppet-agent-almalinux .  # build the image
+docker run -d --name target2 --add-host puppet:<internal_ip> puppet-agent-almalinux # enter puppetmaster internal ip address 
 # Check /etc/hosts using Portainer
 puppet agent -t  # check 
 ```

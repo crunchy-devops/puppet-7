@@ -36,4 +36,4 @@ RUN apt-get update -y && \
 ADD files/supervisord.conf /etc/supervisor/supervisord.conf
 
 CMD ["/usr/bin/supervisord"]
-#CMD ["tail","-f","/dev/null"]
+

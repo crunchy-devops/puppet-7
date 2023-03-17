@@ -3,7 +3,7 @@
 # in the Puppet master's file system in a directory such as /etc/puppet/files.
 # In the Puppet manifest for the node, add a file resource that specifies the source and destination for the file transfer.
 
-file { '/path/to/myfile.txt':
+file { '/tmp/myfile.txt':
   ensure => file,
   source => 'puppet:///files/myfile.txt',
   owner  => 'root',
