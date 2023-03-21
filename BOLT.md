@@ -6,6 +6,15 @@ We can use Puppet Bolt to deploy the agent or other pre-requisites stuff.
 
 ## Configure target1 container using Portainer 
 ```shell
+### Portainer
+docker volume create portainer_data
+docker run -d -p 32125:8000 -p 32126:9443 --name portainer --restart=always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v portainer_data:/data portainer/portainer-ce:latest
+```
+
+
+```shell
 # go to target1 in portainer, open a console 
 passwd
 # enter password as a password for root container
