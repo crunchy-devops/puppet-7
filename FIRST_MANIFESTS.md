@@ -30,7 +30,7 @@ puppet apply /etc/puppetlabs/code/environments/production/manifests/site.pp
 puppet agent -t
 ```
 
-### Chaine de carateres avec simple quote et double quotes et variables
+### Chaine de caracteres avec simple quote et double quotes et variables
 ```puppet
 notify {"FqdnTest":
   message => 'mon fqdn est ${::fqdn}', # With single-quote variables are not converted into value 

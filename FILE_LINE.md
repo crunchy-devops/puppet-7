@@ -62,11 +62,13 @@ line => 'Hello World',
 ```shell
 file { '/tmp/eureka.txt':
 ensure => file,
+backup => '.bck',
 }->
 file_line { 'Append a line to /tmp/eureka.txt':
 path => '/tmp/eureka.txt',  
 line => 'Hello Eureka',
 match   => "^Hello.*$",
+
 }
 ```
 
@@ -83,7 +85,7 @@ file_line { 'no_port':
   ensure => absent,
   match  => '^Port',
   line => 'Port 5432',
-  path   => '/tmp/etc/ssh/ssh_config',
+  path   => '/tmp/etc/ssh/sshd_config',
   match_for_absence => true,
   multiple =>true, 
 }

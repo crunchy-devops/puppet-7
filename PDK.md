@@ -9,7 +9,7 @@ sudo apt install -y pdk
 
 ## Creer l'arborescence d'un nouveau module
 ```shell
-cd /etc/puppetlabs/code/environments/main/modules
+cd /etc/puppetlabs/code/environments/production/modules
 pdk new module webforce
 ```
 Les classes sont des blocs nommés de code Puppet qui sont stockés dans des modules et appliqués ultérieurement  

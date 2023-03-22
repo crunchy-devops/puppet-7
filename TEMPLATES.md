@@ -52,3 +52,5 @@ puppet agent -t
 cat /etc/chrony.conf
 ```
 go to PDK.md 
+
+puppet module install puppet-chrony 

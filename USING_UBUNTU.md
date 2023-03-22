@@ -46,7 +46,7 @@ vi /etc/hosts
 # adding 
 <internal ip_address> puppet  
 # save 
-ping puppet # Test ping
+ping -c 3 puppet # Test ping
 puppet agent -t  # Check if it's work fine
 ```
 
