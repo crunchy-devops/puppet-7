@@ -33,14 +33,14 @@ The 3 big resources are :
 ```shell
 cd /etc/puppetlabs/code/environments/production/modules # change to the relevant directory
 mkdir -p chrony/{manifests,files,examples} # modules directories needed
-yum install tree # install package tree
+apt install tree # install package tree
 tree chrony # for displaying the directory structure
 ```
 
 ## Read the init.pp code 
 And give some explanations
 ```shell
-grep -vE '^(#|$)' /etc/chrony.conf > /etc/puppetlabs/code/environments/production/modules/chrony/files/chrony.conf
+grep -vE '^(#|$)' /etc/chrony/chrony.conf > /etc/puppetlabs/code/environments/production/modules/chrony/files/chrony.conf
 ```
 Note: grep -v means find the lines which do not contains something.  
 so with the E switch is regexp that means find line that do not begin with # or $  
