@@ -16,6 +16,7 @@ This is the system:
 puppet epp render motd.epp
 ```
 
+## Real Example with chrony
 ```shell
 mkdir /etc/puppetlabs/code/environments/production/modules/chrony/templates
 mv /etc/puppetlabs/code/environments/production/modules/chrony/files/chrony.conf \
