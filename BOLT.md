@@ -41,7 +41,7 @@ sudo -s
 bolt command run whoami -t target1 -u root -p password --no-host-key-check
 ssh-keygen -t rsa
 # without a passphrase
-ssh-copy-id roor@target1
+ssh-copy-id root@target1
 bolt command run whoami -t target1 -u root
 ```
 

@@ -16,11 +16,11 @@ The example inventory demonstrates both techniques:
 cp enc.rb /etc/puppetlabs/puppet/
 chown root:puppet /etc/puppetlabs/puppet/enc.rb
 chmod 750 /etc/puppetlabs/puppet/enc.rb
-touch /etc/puppetlabs/puppet/inventory.yaml
+cp inventory.yaml /etc/puppetlabs/puppet/inventory.yaml
 chmod 640 /etc/puppetlabs/puppet/inventory.yaml
 ```
 
-## Set up manually 
+## Set up manually  puppet.conf 
 ```shell
 [master]
 node_terminus = exec
