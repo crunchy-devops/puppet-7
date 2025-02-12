@@ -1,0 +1,1 @@
+I've added version management to your Puppet provider. It now supports installing a specific version of a package and fetching the latest available version. Let me know if you need further enhancements! 🚀
