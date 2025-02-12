@@ -8,3 +8,37 @@ This **Puppet provider** allows you to manage Alpine Linux packages using `apk`.
 - **Querying**: Checks if a package is installed
 
 Would you like additional features, such as version management? 🚀
+Puppet::Type.type(:package).provide(:apk) do
+  desc "Puppet package provider for Alpine Linux using apk."
+
+  commands :apk => "/sbin/apk"
+
+  def install
+    if resource[:ensure] && resource[:ensure] != :present
+      apk("add", "#{resource[:name]}=#{resource[:ensure]}")
+    else
+      apk("add", resource[:name])
+    end
+  end
+
+  def uninstall
+    apk("del", resource[:name])
+  end
+
+  def update
+    apk("update")
+    install
+  end
+
+  def query
+    output = `apk info -e #{resource[:name]}`.chomp
+    return { ensure: :present } if output == resource[:name]
+    { ensure: :absent }
+  end
+
+  def latest
+    output = `apk policy #{resource[:name]}`.scan(/Installed: (\S+)/).flatten.first
+    output || :absent
+  end
+end
+11I
