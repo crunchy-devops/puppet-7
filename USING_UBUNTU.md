@@ -11,8 +11,8 @@ sh connect.sh
 ## Install PuppetServer and Agent in the same time
 ```shell
 sudo apt-get update -y   # update repo link
-wget https://apt.puppetlabs.com/puppet7-release-focal.deb  # install puppet relevant packages
-sudo dpkg -i puppet7-release-focal.deb  # apply puppet package on your VM
+wget https://apt.puppetlabs.com/puppet8-release-noble.deb  # install puppet relevant packages
+sudo dpkg -i puppet8-release-noble.deb  # apply puppet package on your VM
 sudo apt-get update -y  # update os ubuntu again 
 sudo apt-get install puppetserver -y # install puppet server and agent in the same time
 sudo tac /etc/default/puppetserver # reverse edit of puppetserver configuration 
