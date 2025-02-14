@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
 # Setup environment
 ENV HOME /root
@@ -28,9 +28,6 @@ ONBUILD RUN dpkg-reconfigure openssh-server
 
 RUN apt-get update -y && \
     apt-get install -y wget vim  openssh-server supervisor && \
-    wget https://apt.puppetlabs.com/puppet7-release-focal.deb && \
-    dpkg -i puppet7-release-focal.deb && \
-    apt-get update -y && \
     apt-get install puppet-agent -y
 
 ADD files/supervisord.conf /etc/supervisor/supervisord.conf

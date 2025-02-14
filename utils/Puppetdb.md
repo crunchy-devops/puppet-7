@@ -1,6 +1,7 @@
 ### Installing PuppetDB and Using It in a Real Example  
 
-PuppetDB is a powerful database that stores structured data from Puppet. It allows you to query node configurations and facts efficiently. Here’s how to install and use PuppetDB in a practical scenario.
+PuppetDB is a powerful database that stores structured data from Puppet. It allows you to query node configurations and
+facts efficiently. Here’s how to install and use PuppetDB in a practical scenario.
 
 ---
 
