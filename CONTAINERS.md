@@ -36,7 +36,7 @@ puppet agent -t  # check
 ## Signed all certificates
 As root outside containers, on your VM
 ```shell
-/opt/puppetlabs/bin/puppetserver ca sign -a # list all current certificats
+puppetserver ca sign -a # sign current certificats
 ```
 
 **Go to FIRST_MANIFESTS.md**
