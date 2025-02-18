@@ -31,6 +31,14 @@ ansible-playbook -i inventory install_docker_ubuntu.yml
 Log out from your ssh session and log in again so all changes will take effect.  
 Type ``` docker ps``` as ubuntu user for checking if all is fine. 
 
+## install docker-compose
+```shell
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.30.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+sudo chmod +x /usr/bin/docker-compose 
+docker-compose version 
+```
+
+
 ## Portainer 
 ```shell
 ### Portainer

@@ -147,4 +147,119 @@ if $facts['os']['name'] == 'Ubuntu' {
 ## **Conclusion**
 Now you have a working PuppetDB setup integrated with a Puppet server. You can query node facts and use them in Puppet manifests to make dynamic infrastructure decisions.
 
-Would you like me to cover how to write PuppetDB queries for more advanced use cases? 🚀I
+---
+### **🔹 Installing PuppetDB & PostgreSQL Using a Puppet Forge Module**
+
+This setup uses **Puppet Forge modules** to install and configure:  
+✅ **PuppetDB**  
+✅ **PostgreSQL**  
+✅ **Database connectivity between them**
+
+---
+
+## **1️⃣ Required Modules**
+We will use:
+- [`puppetlabs/puppetdb`](https://forge.puppet.com/modules/puppetlabs/puppetdb) → Installs PuppetDB
+- [`puppetlabs/postgresql`](https://forge.puppet.com/modules/puppetlabs/postgresql) → Installs PostgreSQL
+
+### **Install Required Modules**
+Run on the Puppet Master:
+```bash
+puppet module install puppetlabs/puppetdb
+puppet module install puppetlabs/postgresql
+```
+
+---
+
+## **2️⃣ Create the Puppet Manifest**
+Save this as **`site.pp`** (or apply it in a profile class).
+
+```puppet
+class { 'postgresql::server':
+  ensure           => present,
+  listen_addresses => 'localhost',
+  manage_firewall  => false,
+}
+
+# Create PuppetDB Database & User in PostgreSQL
+postgresql::server::db { 'puppetdb':
+  user     => 'puppetdb',
+  password => postgresql::postgresql_password('puppetdb', 'puppetdb_secure_password'),
+  grant    => 'ALL',
+}
+
+class { 'puppetdb':
+  listen_address => '0.0.0.0',
+  database_host  => 'localhost',
+  database_name  => 'puppetdb',
+  database_user  => 'puppetdb',
+  database_password => 'puppetdb_secure_password',
+}
+
+class { 'puppetdb::master::config':
+  puppetdb_server => 'localhost',
+  puppetdb_port   => 8081,
+}
+
+# Ensure PuppetDB service is running
+service { 'puppetdb':
+  ensure => running,
+  enable => true,
+  require => Class['puppetdb'],
+}
+```
+
+---
+
+## **3️⃣ Configure PuppetDB Database Connection**
+Edit PuppetDB config file **`/etc/puppetlabs/puppetdb/conf.d/database.ini`**:
+```ini
+[database]
+classname = org.postgresql.Driver
+subprotocol = postgresql
+subname = //localhost:5432/puppetdb
+username = puppetdb
+password = puppetdb_secure_password
+```
+
+Restart PuppetDB to apply changes:
+```bash
+systemctl restart puppetdb
+```
+
+---
+
+## **4️⃣ Verify Installation**
+### **Check PuppetDB Status**
+```bash
+systemctl status puppetdb
+```
+or
+```bash
+puppet query nodes
+```
+
+### **Check PostgreSQL Database**
+```bash
+sudo -u postgres psql -c '\l'
+```
+Ensure `puppetdb` is listed.
+
+### **Test PuppetDB API**
+```bash
+curl -k https://localhost:8081/pdb/meta/v1/version
+```
+Expected output:
+```json
+{"version":"8.x.x"}
+```
+
+---
+
+## **🎯 Summary**
+✅ Installed PostgreSQL  
+✅ Installed PuppetDB  
+✅ Configured database connection  
+✅ Verified installation
+
+
